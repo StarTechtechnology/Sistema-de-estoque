@@ -10,3 +10,7 @@ Route::get('/', function () {
 Route::get('/estoque', function(){
     return view('estoque');
     });
+
+    Route::get('/ContoleEstoquepag2', function(){
+        return view('/ContoleEstoquepag2');
+        });
