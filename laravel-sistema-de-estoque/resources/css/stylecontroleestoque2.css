@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*Cabeçalho + Menu Principal*/
+header {
+    background-color: #012250;
+    padding: 10px 20px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #012250;
+    list-style-type: none;
+    padding: 0;
+}
+
+.submenu li {
+    padding: 10px 20px;
+}
+
+.submenu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    margin-top: 110px;
+    padding: 60px;
+    margin-left: 300px;
+}
+
+.mainmenubtn {
+    background-color: #012250;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.mainmenubtn:hover {
+    background-color: rgb(13, 13, 61);
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-child {
+    display: none;
+    background-color: #012250;
+    min-width: 200px;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+}
+
+.dropdown-child a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+.retangulo{
+    position: absolute;
+    width: 303px;
+    height: 878px;
+    left: 0px;
+    top: 90px;
+    background: #012250;
+}
+
+/*Botão Item*/
+
+.botao1{
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 16px;
+    color: #fff;
+    background-color: #012250;
+}
+
+/*ícones*/
+
+i {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+/*Tabela Categorias*/
+
+.tabela{
+    width: 100%;
+    user-select: none;
+    text-align: left;
+}
+
+.tabela th{
+    height: 50px;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #000;
+}
+
+.tabela td{
+    height: 50px;
+    padding-left: 20px;
+    border-bottom: 1px solid #000;
+}
+
+.tabela td:last-child,
+.tabela td:last-child{
+    padding: 0;
+    min-width: 140px;
+    text-align: center;
+}
+
+/*Editar*/
+
+.botao-edit{
+    text-align: left;
+    font-size: 16px;
+    color: #fff;
+    background-color: #078a14;
+    border: none;
+}
+
+/*Deletar*/
+
+.botao-delete{
+    text-align: left;
+    font-size: 16px;
+    color: #fff;
+    background-color: #c41010;
+    border: none;
+}
+
+/*Botão Atualização*/
+
+.botao2{
+    width: 110px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 16px;
+    color: #fff;
+    background-color: #012250;
+}
