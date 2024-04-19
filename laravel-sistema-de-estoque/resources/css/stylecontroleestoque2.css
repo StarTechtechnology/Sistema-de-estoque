@@ -175,3 +175,140 @@ i {
     color: #fff;
     background-color: #012250;
 }
+
+/*JANELA CRIAR ITEM*/
+
+.modal{
+    position: absolute;
+    top: 105px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+}
+
+p{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+
+}
+
+.modal-conteudo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+    margin: 15vh auto;
+    padding-bottom: 20px;
+    background-color: white;
+    border: 3px solid #012250;
+}
+
+.modal-fechar{
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: #c41010;
+}
+
+.modal-form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.modal-campo{
+    width: 70%;
+}
+
+.modal-footer{
+    background-color: inherit;
+    text-align: right;
+    padding: 0 20px;
+}
+
+/*JANELA DE EDITAR ITEM*/
+
+.modal-editar{
+    position: absolute;
+    top: 105px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+}
+
+p{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+
+}
+
+.modal-conteudo-editar{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+    margin: 15vh auto;
+    padding-bottom: 20px;
+    background-color: white;
+    border: 3px solid #012250;
+}
+
+.modal-fechar-editar{
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: #c41010;
+}
+
+.modal-form-editar{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.modal-campo-editar{
+    width: 70%;
+}
+
+.modal-footer-editar{
+    background-color: inherit;
+    text-align: right;
+    padding: 0 20px;
+}
+
+/*JANELA DELETAR ITEM*/
+
+.modal-deletar{
+    position: absolute;
+    top: 105px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+}
+
+p{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+
+}
+
+.modal-footer-deletar{
+    background-color: inherit;
+    text-align: right;
+    padding: 0 20px;
+}

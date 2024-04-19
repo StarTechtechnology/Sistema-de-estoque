@@ -95,6 +95,43 @@
                 </tbody>
             </table>
             <button type="button" class="botao2">Atualizar<i class='bx bxs-color'></i></button>
+            <div class="modal">
+                <div class="modal-conteudo">
+                    <form class="modal-form">
+                        <p>Adicionar produto:</p>
+                        <input type="text" class="modal-campo" placeholder="Produto...">
+                        <p>Adicionar quantidade:</p>
+                        <input type="number" class="modal-campo" placeholder="Quantidade...">
+                        <p>Adicionar usuário:</p>
+                        <input type="text" class="modal-campo" placeholder="Usuário...">
+                    </form>
+                    <footer class="modal-footer">
+                        <button class="botao-salvar">Salvar</button>
+                        <button class="botao-cancelar">Cancelar</button>
+                    </footer>
+                </div>
+                <div class="modal-editar">
+                    <form class="modal-form-editar">
+                        <p>Editar produto:</p>
+                        <input type="text" class="modal-campo-editar" placeholder="Produto...">
+                        <p>Editar quantidade:</p>
+                        <input type="number" class="modal-campo-editar" placeholder="Quantidade...">
+                        <p>Editar usuário:</p>
+                        <input type="text" class="modal-campo-editar" placeholder="Usuário...">
+                    </form>
+                    <footer class="modal-footer">
+                        <button class="botao-salvar-editar">Salvar</button>
+                        <button class="botao-cancelar-editar">Cancelar</button>
+                    </footer>
+                </div>
+                <div class="modal-deletar">
+                    <p>Você tem certeza de que quer apagar esse item?</p>
+                    <footer class="modal-footer-deletar">
+                        <button class="botao-salvar-deletar">Sim</button>
+                        <button class="botao-cancelar-deletar">Não</button>
+                    </footer>
+                </div>
+            </div>
         </main>
     </div>    
 </body>
