@@ -11,7 +11,6 @@
     <img src="pesquisa.jpeg" alt="some text" width=60 height=40>
 </head>
 <body>
-    <!--Menu-->
     <header>
         <div class="navbar">
             <div class="dropdown">
@@ -31,108 +30,127 @@
     <div class="content">
         <div class="retangulo"></div>
         <main>
-            <button type="button" class="botao1">Criar novo item<i class='bx bxs-plus-circle'></i></button>
-            <table class="tabela">
+            <button type="button" class="botao1" onclick="abrirModal('modalCriar')">Criar categoria<i class='bx bxs-plus-circle'></i></button>
+            <table id="tabelaCategorias" class="tabela">
                 <thead>
                     <tr>
-                        <th>Categoria/Produto</th>
-                        <th>Quantidade</th>
-                        <th>Usuário</th>
+                        <th>Categoria</th>
                         <th>Ações</th>
-                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Produto 1</td>
-                        <td>5</td>
-                        <td>Usuário 1</td>
-                        <td><button type="button" class="botao-edit">Editar<i class='bx bxs-pencil'></i></button></td>
-                        <td><button type="button" class="botao-delete">Deletar<i class='bx bxs-trash'></i></button></td>
+                        <td>Categoria 1</td>
+                        <td><button type="button" class="botao-visu">Visualizar<i class="fa-solid fa-eye"></i></i></button>
+                            <button type="button" class="botao-edit" onclick="editarItem(this)">Editar<i class='bx bxs-pencil'></i></button>
+                            <button type="button" class="botao-delete" onclick="abrirModal('modalExcluir')">Deletar<i class='bx bxs-trash'></i></button>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Produto 2</td>
-                        <td>6</td>
-                        <td>Usuário 2</td>
-                        <td><button type="button" class="botao-edit">Editar<i class='bx bxs-pencil'></i></button></td>
-                        <td><button type="button" class="botao-delete">Deletar<i class='bx bxs-trash'></i></button></td>
+                        <td>Categoria 2</td>
+                        <td><button type="button" class="botao-visu">Visualizar<i class="fa-solid fa-eye"></i></i></button>
+                            <button type="button" class="botao-edit" onclick="editarItem(this)">Editar<i class='bx bxs-pencil'></i></button>
+                            <button type="button" class="botao-delete" onclick="abrirModal('modalExcluir')">Deletar<i class='bx bxs-trash'></i></button>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Produto 3</td>
-                        <td>3</td>
-                        <td>Usuário 3</td>
-                        <td><button type="button" class="botao-edit">Editar<i class='bx bxs-pencil'></i></button></td>
-                        <td><button type="button" class="botao-delete">Deletar<i class='bx bxs-trash'></i></button></td>
+                        <td>Categoria 3</td>
+                        <td><button type="button" class="botao-visu">Visualizar<i class="fa-solid fa-eye"></i></i></button>
+                            <button type="button" class="botao-edit" onclick="editarItem(this)">Editar<i class='bx bxs-pencil'></i></button>
+                            <button type="button" class="botao-delete" onclick="abrirModal('modalExcluir')">Deletar<i class='bx bxs-trash'></i></button>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Produto 4</td>
-                        <td>3</td>
-                        <td>Usuário 4</td>
-                        <td><button type="button" class="botao-edit">Editar<i class='bx bxs-pencil'></i></button></td>
-                        <td><button type="button" class="botao-delete">Deletar<i class='bx bxs-trash'></i></button></td>
+                        <td>Categoria 4</td>
+                        <td><button type="button" class="botao-visu">Visualizar<i class="fa-solid fa-eye"></i></i></button>
+                            <button type="button" class="botao-edit" onclick="editarItem(this)">Editar<i class='bx bxs-pencil'></i></button>
+                            <button type="button" class="botao-delete" onclick="abrirModal('modalExcluir')">Deletar<i class='bx bxs-trash'></i></button>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Produto 5</td>
-                        <td>5</td>
-                        <td>Usuário 5</td>
-                        <td><button type="button" class="botao-edit">Editar<i class='bx bxs-pencil'></i></button></td>
-                        <td><button type="button" class="botao-delete">Deletar<i class='bx bxs-trash'></i></button></td>
+                        <td>Categoria 5</td>
+                        <td><button type="button" class="botao-visu">Visualizar<i class="fa-solid fa-eye"></i></button>
+                            <button type="button" class="botao-edit" onclick="editarItem(this)">Editar<i class='bx bxs-pencil'></i></button>
+                            <button type="button" class="botao-delete" onclick="abrirModal('modalExcluir')">Deletar<i class='bx bxs-trash'></i></button>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Produto 6</td>
-                        <td>6</td>
-                        <td>Usuário 6</td>
-                        <td><button type="button" class="botao-edit">Editar<i class='bx bxs-pencil'></i></button></td>
-                        <td><button type="button" class="botao-delete">Deletar<i class='bx bxs-trash'></i></button></td>
+                        <td>Categoria 6</td>
+                        <td><button type="button" class="botao-visu">Visualizar<i class="fa-solid fa-eye"></i></button>
+                            <button type="button" class="botao-edit" onclick="editarItem(this)">Editar<i class='bx bxs-pencil'></i></button>
+                            <button type="button" class="botao-delete" onclick="abrirModal('modalExcluir')">Deletar<i class='bx bxs-trash'></i></button>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Produto 7</td>
-                        <td>7</td>
-                        <td>Usuário 7</td>
-                        <td><button type="button" class="botao-edit">Editar<i class='bx bxs-pencil'></i></button></td>
-                        <td><button type="button" class="botao-delete">Deletar<i class='bx bxs-trash'></i></button></td>
+                        <td>Categoria 7</td>
+                        <td><button type="button" class="botao-visu" onclick="abrirVisu('modalVisualizar')">Visualizar<i class="fa-solid fa-eye"></i></i></button>
+                            <button type="button" class="botao-edit" onclick="editarItem(this)">Editar<i class='bx bxs-pencil'></i></button>
+                            <button type="button" class="botao-delete" onclick="abrirModal('modalExcluir')">Deletar<i class='bx bxs-trash'></i></button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
-            <button type="button" class="botao2">Atualizar<i class='bx bxs-color'></i></button>
-            <div class="modal">
+            <div id="modalCriar" class="modal">
                 <div class="modal-conteudo">
-                    <form class="modal-form">
-                        <p>Adicionar produto:</p>
-                        <input type="text" class="modal-campo" placeholder="Produto...">
-                        <p>Adicionar quantidade:</p>
-                        <input type="number" class="modal-campo" placeholder="Quantidade...">
-                        <p>Adicionar usuário:</p>
-                        <input type="text" class="modal-campo" placeholder="Usuário...">
+                    <form id="formCriar">
+                        <p>Adicionar categoria:</p>
+                        <input type="text" id="novaCategoria" placeholder="Categoria...">
+                        <button type="button" onclick="criarItem()">Salvar</button>
+                        <button type="button" onclick="fecharModal('modalCriar')">Cancelar</button>
                     </form>
-                    <footer class="modal-footer">
-                        <button class="botao-salvar">Salvar</button>
-                        <button class="botao-cancelar">Cancelar</button>
-                    </footer>
                 </div>
-                <div class="modal-editar">
-                    <form class="modal-form-editar">
-                        <p>Editar produto:</p>
-                        <input type="text" class="modal-campo-editar" placeholder="Produto...">
-                        <p>Editar quantidade:</p>
-                        <input type="number" class="modal-campo-editar" placeholder="Quantidade...">
-                        <p>Editar usuário:</p>
-                        <input type="text" class="modal-campo-editar" placeholder="Usuário...">
+            </div>
+             <div id="modalVisualizar" class="modal">
+                <div class="modal-conteudo">
+                    <form id="formVisualizar">
+                        <p>Produtos da categoria:</p>
+                        <ol class="listaProdutos">
+                            <li>Produto 1</li>
+                            <li>Produto 2</li>
+                            <li>Produto 3</li>
+                            <li>Produto 4</li>
+                            <li>Produto 5</li>
+                        </ol>
                     </form>
-                    <footer class="modal-footer">
-                        <button class="botao-salvar-editar">Salvar</button>
-                        <button class="botao-cancelar-editar">Cancelar</button>
-                    </footer>
                 </div>
-                <div class="modal-deletar">
-                    <p>Você tem certeza de que quer apagar esse item?</p>
-                    <footer class="modal-footer-deletar">
-                        <button class="botao-salvar-deletar">Sim</button>
-                        <button class="botao-cancelar-deletar">Não</button>
-                    </footer>
+            </div> 
+
+            <div id="modalEditar" class="modal">
+                <div class="modal-conteudo">
+                    <form id="formEditar">
+                        <p>Editar categoria:</p>
+                        <input type="text" id="categoriaEditada" placeholder="Categoria...">
+                        <button type="button" onclick="salvar()">Salvar</button>
+                        <button type="button" onclick="fecharModal('modalEditar')">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+        
+            <div id="modalExcluir" class="modal">
+                <div class="modal-conteudo">
+                    <form id="formDeletar">
+                        <p>Você tem certeza de que quer apagar esse item?</p>
+                        <button onclick="salvar()">Sim</button>
+                        <button type="button" onclick="fecharModal('modalEditar')">Não</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="modalVisualizar" class="modal">
+                <div class="modal-conteudo">
+                    <form id="formVisualizar">
+                        <p>Produtos da categoria 1:</p>
+                        <h6>Produto A</h6>
+                        <h6>Produto D</h6>
+                        <h6>Produto Y</h6>
+                        <h6>Produto E</h6>
+                        <h6>Produto G</h6>
+                        <button type="button" onclick="salvar()">Fechar</button>
+                    </form>
                 </div>
             </div>
         </main>
-    </div>    
+    </div>
+    <script src="testando.js"></script>
 </body>
 </html>
