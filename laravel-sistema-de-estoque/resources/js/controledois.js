@@ -7,7 +7,7 @@ function fecharModal(idModal) {
 }
 
 //Funções CRUD
-
+var proximoId = 1;
 function criarItem() {
     let novaCategoria = document.getElementById("novaCategoria").value;
     let tabela = document.getElementById("tabelaCategorias").getElementsByTagName('tbody')[0];
@@ -21,6 +21,7 @@ function criarItem() {
         <button type="button" class="botao-delete" onclick="abrirModalDeletar(this)">Deletar<i class='bx bxs-trash'></i></button>
     `;
     fecharModal('modalCriar');
+    proximoId++;
 }
 
 function editarItem(botaoEditar) {

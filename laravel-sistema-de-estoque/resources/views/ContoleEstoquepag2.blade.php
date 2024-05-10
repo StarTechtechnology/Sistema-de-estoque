@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle de Estoque</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-     {{--...--}}
-
-    @vite(['resources/css/stylecontroleestoque2.css', 'resources/js/JsControleEstoque.js'])
+     
+    @vite(['resources/css/stylecontroleestoque2.css'])
     <img src="pesquisa.jpeg" alt="some text" width=60 height=40>
 </head>
 <body>
@@ -39,55 +38,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Categoria 1</td>
-                        <td><button type="button" class="botao-visu">Visualizar<i class="fa-solid fa-eye"></i></i></button>
-                            <button type="button" class="botao-edit" onclick="editarItem(this)">Editar<i class='bx bxs-pencil'></i></button>
-                            <button type="button" class="botao-delete" onclick="abrirModal('modalExcluir')">Deletar<i class='bx bxs-trash'></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Categoria 2</td>
-                        <td><button type="button" class="botao-visu">Visualizar<i class="fa-solid fa-eye"></i></i></button>
-                            <button type="button" class="botao-edit" onclick="editarItem(this)">Editar<i class='bx bxs-pencil'></i></button>
-                            <button type="button" class="botao-delete" onclick="abrirModal('modalExcluir')">Deletar<i class='bx bxs-trash'></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Categoria 3</td>
-                        <td><button type="button" class="botao-visu">Visualizar<i class="fa-solid fa-eye"></i></i></button>
-                            <button type="button" class="botao-edit" onclick="editarItem(this)">Editar<i class='bx bxs-pencil'></i></button>
-                            <button type="button" class="botao-delete" onclick="abrirModal('modalExcluir')">Deletar<i class='bx bxs-trash'></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Categoria 4</td>
-                        <td><button type="button" class="botao-visu">Visualizar<i class="fa-solid fa-eye"></i></i></button>
-                            <button type="button" class="botao-edit" onclick="editarItem(this)">Editar<i class='bx bxs-pencil'></i></button>
-                            <button type="button" class="botao-delete" onclick="abrirModal('modalExcluir')">Deletar<i class='bx bxs-trash'></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Categoria 5</td>
-                        <td><button type="button" class="botao-visu">Visualizar<i class="fa-solid fa-eye"></i></button>
-                            <button type="button" class="botao-edit" onclick="editarItem(this)">Editar<i class='bx bxs-pencil'></i></button>
-                            <button type="button" class="botao-delete" onclick="abrirModal('modalExcluir')">Deletar<i class='bx bxs-trash'></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Categoria 6</td>
-                        <td><button type="button" class="botao-visu">Visualizar<i class="fa-solid fa-eye"></i></button>
-                            <button type="button" class="botao-edit" onclick="editarItem(this)">Editar<i class='bx bxs-pencil'></i></button>
-                            <button type="button" class="botao-delete" onclick="abrirModal('modalExcluir')">Deletar<i class='bx bxs-trash'></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Categoria 7</td>
-                        <td><button type="button" class="botao-visu" onclick="abrirVisu('modalVisualizar')">Visualizar<i class="fa-solid fa-eye"></i></i></button>
-                            <button type="button" class="botao-edit" onclick="editarItem(this)">Editar<i class='bx bxs-pencil'></i></button>
-                            <button type="button" class="botao-delete" onclick="abrirModal('modalExcluir')">Deletar<i class='bx bxs-trash'></i></button>
-                        </td>
-                    </tr>
+                    
                 </tbody>
             </table>
             <div id="modalCriar" class="modal">
@@ -100,9 +51,9 @@
                     </form>
                 </div>
             </div>
-             <div id="modalVisualizar" class="modal">
+             <div id="modalVisualizar1" class="modal">
                 <div class="modal-conteudo">
-                    <form id="formVisualizar">
+                    <form id="formVisualizar1">
                         <p>Produtos da categoria:</p>
                         <ol class="listaProdutos">
                             <li>Produto 1</li>
@@ -111,34 +62,35 @@
                             <li>Produto 4</li>
                             <li>Produto 5</li>
                         </ol>
+                        <button type="button" onclick="fecharModal('modalVisualizar1')">Cancelar</button>
                     </form>
                 </div>
             </div> 
 
-            <div id="modalEditar" class="modal">
+            <div id="modalVisualizar2" class="modal">
                 <div class="modal-conteudo">
-                    <form id="formEditar">
+                    <form id="formVisualizar2">
                         <p>Editar categoria:</p>
                         <input type="text" id="categoriaEditada" placeholder="Categoria...">
                         <button type="button" onclick="salvar()">Salvar</button>
-                        <button type="button" onclick="fecharModal('modalEditar')">Cancelar</button>
+                        <button type="button" onclick="fecharModal('modalVisualizar2')">Cancelar</button>
                     </form>
                 </div>
             </div>
         
-            <div id="modalExcluir" class="modal">
+            <div id="modalVisualizar3" class="modal">
                 <div class="modal-conteudo">
-                    <form id="formDeletar">
+                    <form id="formVisualizar3">
                         <p>Você tem certeza de que quer apagar esse item?</p>
                         <button onclick="salvar()">Sim</button>
-                        <button type="button" onclick="fecharModal('modalEditar')">Não</button>
+                        <button type="button" onclick="fecharModal('modalExcluir')">Não</button>
                     </form>
                 </div>
             </div>
 
-            <div id="modalVisualizar" class="modal">
+            <div id="modalVisualizar4" class="modal">
                 <div class="modal-conteudo">
-                    <form id="formVisualizar">
+                    <form id="formVisualizar4">
                         <p>Produtos da categoria 1:</p>
                         <h6>Produto A</h6>
                         <h6>Produto D</h6>
@@ -151,6 +103,76 @@
             </div>
         </main>
     </div>
-    <script src="testando.js"></script>
+   <script>
+    function abrirModal(idModal) {
+    document.getElementById(idModal).style.display = "flex";
+}
+
+function fecharModal(idModal) {
+    let modal = document.getElementById(idModal);
+    if (modal) {
+        modal.style.display = "none";
+        console.log("Modal fechado com sucesso:", idModal);
+    } else {
+        console.error("Modal não encontrado:", idModal);
+    }
+}
+
+//Funções CRUD
+var proximoId = 1;
+
+function criarItem() {
+    let novaCategoria = document.getElementById("novaCategoria").value;
+    let tabela = document.getElementById("tabelaCategorias").getElementsByTagName('tbody')[0];
+    let novaLinha = tabela.insertRow();
+    let idItem = proximoId; // Salva o ID atual antes de incrementar
+    novaLinha.setAttribute('data-id', idItem); // Define o atributo data-id
+    let celulaCategoria = novaLinha.insertCell(0);
+    celulaCategoria.innerText = novaCategoria;
+    let celulaAcoes = novaLinha.insertCell(1);
+    celulaAcoes.innerHTML = `
+        <button type="button" class="botao-visu" onclick="abrirVisu(1)">Visualizar<i class="bx bxs-eye"></i></button>
+        <button type="button" class="botao-edit" onclick="abrirVisu(2)">Editar<i class='bx bxs-pencil'></i></button>
+        <button type="button" class="botao-delete" onclick="deletarItem(this)">Deletar<i class='bx bxs-trash'></i></button>
+    `;
+    fecharModal('modalCriar');
+    let botoesEditar = novaLinha.querySelectorAll('.botao-edit');
+    botoesEditar.forEach(botao => {
+        botao.addEventListener('click', function() {
+            editarItem(botao); // Passa o botão clicado como argumento
+        });
+    });
+    proximoId++;
+}
+
+
+function editarItem(botaoEditar) {
+    let linha = botaoEditar.parentNode.parentNode; // Obtém a linha associada ao botão "Editar" clicado
+    let idItem = linha.getAttribute('data-id'); // Obtém o ID do item
+    linha.setAttribute('data-editando', 'true'); // Marca a linha como editando
+    let categoriaAtual = linha.cells[0].innerText;
+    document.getElementById("categoriaEditada").value = categoriaAtual;
+    abrirModal('modalVisualizar2');
+}
+
+function salvar() {
+    let categoriaEditada = document.getElementById("categoriaEditada").value;
+    let linhaEditando = document.querySelector("tr[data-editando='true']");
+    let celulaCategoria = linhaEditando.cells[0];
+    celulaCategoria.innerText = categoriaEditada;
+    linhaEditando.removeAttribute('data-editando'); // Remove a marcação de edição
+    fecharModal('modalVisualizar2');
+}
+
+function deletarItem(botaoDeletar) {
+    let linha = botaoDeletar.parentNode.parentNode; // Obtém a linha associada ao botão "Deletar" clicado
+    linha.remove(); // Remove a linha da tabela
+    fecharModal('modalVisualizar3'); // Fecha o modal de confirmação de exclusão
+}
+
+function abrirVisu(numeroModal) {
+        abrirModal('modalVisualizar' + numeroModal); // Concatene o número do modal ao ID
+    }
+   </script>
 </body>
 </html>

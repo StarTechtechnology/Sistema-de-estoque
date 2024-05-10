@@ -7,14 +7,14 @@ Route::get('/', function () {
 });
 
 
-Route::get('estoque', function(){
+Route::get('/estoque', function(){
     return view('estoque');
     });
 
-    Route::get('/ContoleEstoquepag2', function(){
-        return view('/ContoleEstoquepag2');
+    Route::get('/ControleDois', function(){
+        return view('ContoleEstoquepag2');
         });
 
-        Route::get('/ContoleEstoque', function(){
-            return view('/ControleEstoque');
+        Route::get('/ControleEstoque', function(){
+            return view('ControleEstoque');
             });
